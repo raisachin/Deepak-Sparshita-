@@ -34,18 +34,41 @@ async function startMusicFromInteraction(){
     label.textContent="Tap to play music";
   }
 }
-let musicInteractionStarted = false;
-function firstInteractionStartsMusic(){
-  if(musicInteractionStarted) return;
-  musicInteractionStarted = true;
-  startMusicFromInteraction();
-  document.removeEventListener("pointerdown", firstInteractionStartsMusic);
-  document.removeEventListener("keydown", firstInteractionStartsMusic);
-  document.removeEventListener("touchstart", firstInteractionStartsMusic);
+const gate = document.getElementById("invitationGate");
+document.body.classList.add("invitation-locked");
+
+let invitationOpened = false;
+async function openInvitation(){
+  if(invitationOpened) return;
+  invitationOpened = true;
+  gate.classList.add("opening");
+  gate.setAttribute("aria-label","Opening the engagement invitation");
+  // Calling play directly from this tap/click gives mobile browsers the best chance
+  // of allowing the soundtrack to start as part of the user's gesture.
+  try{
+    audio.volume = 0;
+    await audio.play();
+    toggle.classList.add("playing");
+    label.textContent="Pause music";
+    toggle.setAttribute("aria-label","Pause background music");
+    rampMusicUp();
+  }catch(e){
+    label.textContent="Tap to play music";
+  }
+  window.setTimeout(()=>{
+    gate.classList.add("dismissed");
+    document.body.classList.remove("invitation-locked");
+    document.body.classList.add("invitation-open");
+    window.setTimeout(()=>gate.remove(),850);
+  },720);
 }
-document.addEventListener("pointerdown", firstInteractionStartsMusic, {once:true, passive:true});
-document.addEventListener("keydown", firstInteractionStartsMusic, {once:true});
-document.addEventListener("touchstart", firstInteractionStartsMusic, {once:true, passive:true});
+gate.addEventListener("click",openInvitation);
+gate.addEventListener("keydown",e=>{
+  if(e.key==="Enter" || e.key===" "){
+    e.preventDefault();
+    openInvitation();
+  }
+});
 toggle.addEventListener("click",async()=>{
   if(audio.paused){
     await startMusicFromInteraction();
