@@ -61,3 +61,19 @@ const lightbox=document.getElementById("lightbox"), lightboxImage=document.getEl
 document.querySelectorAll(".photo-card").forEach(card=>card.addEventListener("click",()=>{const img=card.querySelector("img");if(img&&img.getAttribute("src")&&img.complete&&img.naturalWidth>0){lightboxImage.src=img.src;lightbox.classList.add("open");lightbox.setAttribute("aria-hidden","false")}}));
 function closeLightbox(){lightbox.classList.remove("open");lightbox.setAttribute("aria-hidden","true");lightboxImage.src=""}
 document.getElementById("closeLightbox").addEventListener("click",closeLightbox);lightbox.addEventListener("click",e=>{if(e.target===lightbox)closeLightbox()});document.addEventListener("keydown",e=>{if(e.key==="Escape")closeLightbox()});
+
+// Reveal sections gently as guests scroll.
+const revealEls = document.querySelectorAll(".reveal");
+if ("IntersectionObserver" in window) {
+  const revealObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-visible");
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  revealEls.forEach(el => revealObserver.observe(el));
+} else {
+  revealEls.forEach(el => el.classList.add("is-visible"));
+}

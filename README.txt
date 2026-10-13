@@ -57,3 +57,6 @@ NOTES
 
 LIQUID GLASS
 The nav, CTA buttons, venue card, countdown blocks, gallery tiles and floating music control now use translucent glass effects and blur.
+
+ENGAGEMENT VIBE UPDATE
+The site now includes a photo-led hero, engagement seal, ring motif, ornate frames, romantic reveal transitions, richer emerald/champagne styling, decorative sparkles and glass-effect components. Names display as Sparshita & Deepak.
