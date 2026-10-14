@@ -1,112 +1,132 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#f7f0e4"><title>Sparshita & Deepak — Modern Royalty</title>
-<meta name="description" content="A modern royal engagement invitation for Sparshita and Deepak, 31 October 2026, Delhi.">
-<style>
-:root{--ivory:#faf6ee;--paper:#f2e8d8;--gold:#b99a62;--gold-light:#e6d3a9;--ink:#382b22;--muted:#7d6a56;--glass:#fffaf0b8;--line:#cbb27e;--serif:"Bodoni MT",Didot,"Times New Roman",serif;--sans:system-ui,-apple-system,"Segoe UI",sans-serif}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);font-family:var(--sans);background:var(--ivory);overflow-x:hidden}body.locked{overflow:hidden}a{color:inherit}
-body:before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(ellipse at 8% 18%,#e4d2ad44,transparent 42%),radial-gradient(ellipse at 94% 78%,#c6a76b25,transparent 38%),linear-gradient(135deg,#fcf8f0,#f1e6d4)}
-.gate{position:fixed;inset:0;z-index:100;display:grid;place-items:center;padding:20px;background:linear-gradient(135deg,#f9f3e9,#e9dcc5);transition:opacity .8s,visibility .8s;overflow:hidden;cursor:pointer}
-.gate:before{content:"";position:absolute;inset:12px;border:1px solid var(--gold)}.gate:after{content:"";position:absolute;inset:20px;border:1px solid #c9ae78;pointer-events:none}
-.gate-flower{position:absolute;font:clamp(100px,25vw,230px)/1 var(--serif);color:#c5a66a19;pointer-events:none}.flower-a{top:-36px;left:-15px}.flower-b{bottom:-65px;right:-10px;transform:rotate(180deg)}
-.gate-card{position:relative;width:min(440px,92vw);padding:36px 22px 32px;text-align:center;border:1px solid var(--gold);outline:1px solid #c8ac74;outline-offset:6px;background:linear-gradient(145deg,#fffdf7eF,#f4ead8ed);box-shadow:0 25px 65px #6e57301c;backdrop-filter:blur(16px)}
-.eyebrow{font-size:9px;font-weight:800;letter-spacing:3px;text-transform:uppercase;color:#8b744a}
-.crest{width:70px;height:70px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;margin:20px auto 18px;color:#9d7c40;font:italic 25px var(--serif);position:relative;background:#fffaf2}
-.crest:before,.crest:after{content:"✦";position:absolute;color:var(--gold);font-size:10px;top:50%;transform:translateY(-50%)}.crest:before{left:-7px}.crest:after{right:-7px}
-.gate h1{font:clamp(42px,10vw,60px)/.91 var(--serif);font-weight:400;letter-spacing:-1.8px;margin:0;color:#46352a}.gate h1 span{display:block;font-style:italic;font-size:.65em;color:#b09259;margin:7px}
-.gate-date{margin:22px 0;color:#8c7144;font-size:10px;font-weight:800;letter-spacing:2px}
-.gate-flourish{color:#b99a62;letter-spacing:8px;margin:16px 0 22px}
-.tap{display:inline-block;border:1px solid var(--gold);background:#fffaf0;padding:13px 18px;color:#7c6136;font-size:9px;letter-spacing:2px;font-weight:800;text-transform:uppercase}
-.gate-note{font:italic 14px var(--serif);color:#8e7b62;margin:19px 0 0}
-.gate.opening .gate-card{animation:openCard .65s ease both}.gate.dismissed{opacity:0;visibility:hidden;pointer-events:none}@keyframes openCard{to{transform:translateY(-12px) scale(.96);opacity:0}}
-body.locked header,body.locked main,body.locked footer,body.locked .music{visibility:hidden}
-header{position:absolute;top:20px;left:50%;transform:translateX(-50%);z-index:5;width:min(1080px,calc(100% - 32px));display:flex;justify-content:space-between;align-items:center;padding:14px 18px;border:1px solid #fff;background:#fffaf0c9;backdrop-filter:blur(16px);box-shadow:0 8px 35px #42321c10}
-.brand{font:italic 20px var(--serif);white-space:nowrap}.brand span{color:var(--gold)}
-nav{display:none;gap:22px}nav a{text-decoration:none;font-size:9px;letter-spacing:1.3px;text-transform:uppercase;color:#7c6a55}nav a:hover{color:#a78b53}
-.header-date{font-size:9px;letter-spacing:1.5px;font-weight:800;color:#947643;white-space:nowrap}
-.hero{position:relative;isolation:isolate;min-height:100svh;display:flex;align-items:flex-end;padding:140px 22px 48px;overflow:hidden;background:#4b3c2d}
-.hero-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 32%;z-index:-3;filter:saturate(.76) sepia(.12)}
-.hero:before{content:"";position:absolute;inset:0;z-index:-2;background:linear-gradient(180deg,#1d171024 0%,#281c1750 42%,#241911d9 100%)}
-.hero:after{content:"";position:absolute;inset:13px;border:1px solid #e9d7b8a6;z-index:-1;pointer-events:none}
-.hero-inner{width:min(1050px,100%);margin:auto;display:grid;gap:20px;align-items:end;color:#fff6e7}
-.kicker{font-size:9px;letter-spacing:3px;text-transform:uppercase;font-weight:800;color:#e2c78f}
-.hero h2{font:clamp(57px,13vw,116px)/.82 var(--serif);letter-spacing:-3px;font-weight:400;margin:20px 0 22px;text-shadow:0 7px 30px #1a100b80}
-.hero h2 span{display:block;margin:9px 0 8px 8px;color:#e6d0a3;font-size:.48em;font-style:italic}
-.hero-copy{max-width:690px}.hero-copy p{font-size:14px;line-height:1.85;color:#f4e8d7;max-width:450px}
-.date-pill{display:inline-block;margin-top:12px;padding:12px 15px;border:1px solid #ddc38e;background:#fff6e7;color:#6d5230;font-size:9px;font-weight:900;letter-spacing:1.7px}
-.hero-seal{position:absolute;right:25px;top:24%;width:100px;height:100px;display:grid;place-items:center;border:1px solid #e5c98f;border-radius:50%;background:#fff9ec21;color:#fff0d1;font:italic 13px/1.4 var(--serif);text-align:center;backdrop-filter:blur(8px);transform:rotate(8deg)}
-.scroll-note{display:block;margin-top:24px;font-size:9px;letter-spacing:2px;color:#e5d1b1}
-.section{padding:76px 20px}.inner{width:min(1000px,100%);margin:auto}.section-head{text-align:center;max-width:680px;margin:0 auto 34px}
-.section h2{font:clamp(40px,8vw,72px)/.98 var(--serif);font-weight:400;letter-spacing:-1.5px;color:#4a3828;margin:14px 0 17px}
-.intro{font-size:14px;line-height:1.9;color:var(--muted);max-width:540px;margin:0 auto}
-.story{background:linear-gradient(120deg,#f1e5d2,#faf5eb)}.story-grid{display:grid;gap:28px;align-items:center}
-.story-photo{position:relative;padding:10px;background:#fffaf0;border:1px solid var(--gold);box-shadow:0 18px 45px #4c371a19;transform:rotate(-1deg)}.story-photo:before{content:"";position:absolute;inset:5px;border:1px solid #d7c194;pointer-events:none}
-.story-photo img{width:100%;display:block;aspect-ratio:4/5;object-fit:cover}
-.story-copy{padding:30px 24px;border:1px solid #d4bd8d;background:#fffaf0bd;backdrop-filter:blur(12px)}
-.story-copy p{font:21px/1.7 var(--serif);color:#65513d}.story-copy em{color:#a18249}
-.gallery{background:#fbf7ef}.gallery-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:17px}
-.photo{margin:0;position:relative;padding:8px 8px 32px;background:#fffdf7;border:1px solid #d8c69d;box-shadow:0 10px 25px #4d371711;transform:rotate(var(--tilt,-1deg));transition:transform .25s}
-.photo:nth-child(2n){--tilt:1deg;background:#f4ead9}.photo img{display:block;width:100%;aspect-ratio:3/4;object-fit:cover;filter:saturate(.88)}
-.photo figcaption{position:absolute;bottom:8px;left:4px;right:4px;text-align:center;color:#806743;font:italic 14px var(--serif)}
-.glass-note{margin:34px auto 0;max-width:640px;padding:22px;text-align:center;border:1px solid #cdb781;background:#ffffff91;backdrop-filter:blur(18px);box-shadow:0 10px 30px #5e47210d}
-.glass-note p{margin:0;font:italic 20px/1.6 var(--serif);color:#6c5638}
-.details{background:#e9ddc9}.details .section-head .intro{color:#796850}
-.detail-grid{display:grid;gap:17px}.detail-card{padding:28px 24px;border:1px solid #c7ac70;background:#fff9eecc;backdrop-filter:blur(14px);box-shadow:8px 8px 0 #d7c5a5}
-.detail-icon{font-size:28px;color:#b29458}.detail-label{font-size:9px;letter-spacing:2px;text-transform:uppercase;font-weight:800;color:#9a7a42}
-.detail-card h3{font:32px var(--serif);font-weight:400;color:#4b3928;margin:12px 0}.detail-card p{font-size:13px;line-height:1.8;color:#75614a}
-.map-link,.cta{display:inline-block;margin-top:9px;padding:12px 15px;background:#6c5334;color:#fff7e8;text-decoration:none;font-size:9px;letter-spacing:1.5px;font-weight:800}
-.countdown{text-align:center;background:#f7f0e4}.timer{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px;max-width:650px;margin:30px auto 0}
-.timebox{padding:18px 4px;border:1px solid #d4bd8a;background:#fffaf0;box-shadow:0 9px 24px #51401a0c}.timebox b{display:block;font:clamp(29px,7vw,51px) var(--serif);font-weight:400;color:#9a7b42}.timebox span{font-size:8px;letter-spacing:1.5px;font-weight:800;color:#8b7659}
-.closing{padding-bottom:86px;text-align:center}.closing-card{max-width:760px;margin:auto;padding:38px 22px;border:1px solid #c9ae75;outline:1px solid #e4d3ad;outline-offset:6px;background:#fffaf0c9;backdrop-filter:blur(12px)}
-.closing p{max-width:470px;margin:0 auto 22px;color:#7b6a55;font-size:14px;line-height:1.9}
-footer{padding:34px 18px 42px;text-align:center;background:#45372a;color:#e5d2aa;font-size:9px;letter-spacing:2px;line-height:1.9}
-.footer-names{font:35px var(--serif);letter-spacing:-1px;color:#fff7e8;margin:0 0 8px}.footer-names span{color:#d0b276}
-.music{position:fixed;right:14px;bottom:15px;z-index:20;border:1px solid #c9ad72;background:#fff8ebed;color:#70552f;padding:12px 15px;font-size:10px;letter-spacing:1px;font-weight:800;box-shadow:0 7px 22px #31241120;cursor:pointer;backdrop-filter:blur(12px)}
-.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s,transform .7s}.reveal.visible{opacity:1;transform:translateY(0)}
-@media(min-width:680px){nav{display:flex}.hero{padding:145px 38px 60px}.hero-inner{grid-template-columns:1fr 160px}.hero-seal{position:relative;top:auto;right:auto;width:140px;height:140px;justify-self:center;align-self:center;font-size:16px}.story-grid{grid-template-columns:.85fr 1.15fr;gap:46px}.story-copy{padding:42px}.gallery-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}.detail-grid{grid-template-columns:1fr 1fr;gap:22px}.section{padding:100px 28px}}
-@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition-duration:.01ms!important;animation-duration:.01ms!important}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#123b2f">
+  <title>Sparshita & Deepak | Engagement Invitation</title>
+  <meta name="description" content="With love and blessings, join us to celebrate the engagement of Sparshita and Deepak on 31 October 2026 at The Oliver Suites, Delhi.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Sparshita & Deepak — A Promise of Forever">
+  <meta property="og:description" content="Two hearts, one beautiful beginning. Join us on 31 October 2026.">
+  <meta property="og:image" content="assets/invitation-preview.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
 </head>
-<body class="locked">
-<div class="gate" id="invitationGate" role="button" tabindex="0" aria-label="Tap to open the invitation">
- <span class="gate-flower flower-a" aria-hidden="true">❦</span><span class="gate-flower flower-b" aria-hidden="true">❦</span>
- <div class="gate-card"><div class="eyebrow">Together with our families</div><div class="crest">S <span style="font-size:12px;color:var(--gold)">&</span> D</div>
- <h1>Sparshita <span>&</span> Deepak</h1><div class="gate-date">SATURDAY · 31 OCTOBER 2026</div><div class="gate-flourish">✦ ❧ ✦</div>
- <div class="tap">Tap to open your invitation</div><p class="gate-note">An evening of love, laughter & forever.</p></div>
-</div>
-<header><div class="brand">Sparshita <span>&</span> Deepak</div><nav><a href="#story">Our story</a><a href="#memories">Memories</a><a href="#details">The celebration</a></nav><div class="header-date">31 · 10 · 26</div></header>
-<main>
-<section class="hero" id="home"><img class="hero-photo" src="assets/hero.jpg" alt="Sparshita and Deepak" fetchpriority="high">
- <div class="hero-seal">a beautiful<br>beginning<br>✦</div><div class="hero-inner"><div class="hero-copy"><div class="kicker">A promise wrapped in forever</div>
- <h2>Sparshita <span>&</span> Deepak</h2><p>With full hearts and endless gratitude, we invite you to be part of a day that marks the beginning of our next beautiful chapter.</p>
- <div class="date-pill">SATURDAY · 31 OCTOBER 2026</div><span class="scroll-note">A CELEBRATION OF LOVE · SCROLL TO EXPLORE ↓</span></div></div>
-</section>
-<section class="section story" id="story"><div class="inner story-grid"><div class="story-photo reveal"><img src="assets/memory-2.jpg" alt="Sparshita and Deepak sharing a moment" loading="lazy"></div>
- <div class="story-copy reveal"><div class="eyebrow">The beginning of always</div><h2>Two hearts, one beautiful story.</h2><p>In the little moments, the shared adventures, and the quiet comfort of being together, we found something rare: <em>a love that feels like home.</em> Now, we would be honoured to celebrate this next chapter with you.</p></div></div></section>
-<section class="section gallery" id="memories"><div class="inner"><div class="section-head reveal"><div class="eyebrow">Our favourite chapters</div><h2>Memories, framed with love.</h2><p class="intro">A few treasured glimpses of the journey that brought us here.</p></div>
- <div class="gallery-grid">
- <figure class="photo reveal"><img src="assets/memory-1.jpg" alt="A favourite couple memory" loading="lazy"><figcaption>Our kind of magic ♡</figcaption></figure>
- <figure class="photo reveal"><img src="assets/memory-2.jpg" alt="A sweet moment together" loading="lazy"><figcaption>Just us, always</figcaption></figure>
- <figure class="photo reveal"><img src="assets/memory-3.jpg" alt="A cherished photograph together" loading="lazy"><figcaption>And so it begins ✦</figcaption></figure>
- </div><div class="glass-note reveal"><p>“The best thing to hold onto in life is each other.”</p></div></div></section>
-<section class="section details" id="details"><div class="inner"><div class="section-head reveal"><div class="eyebrow">The occasion</div><h2>A day to remember.</h2><p class="intro">Your presence and blessings would make our celebration truly complete.</p></div>
- <div class="detail-grid"><article class="detail-card reveal"><div class="detail-icon">✧</div><div class="detail-label">Please join us</div><h3>Engagement Day</h3><p><strong>Saturday, 31 October 2026</strong></p><p>A gathering of family and friends, filled with blessings, laughter, and beautiful memories.</p></article>
- <article class="detail-card reveal"><div class="detail-icon">⌖</div><div class="detail-label">The venue</div><h3>The Oliver Suites</h3><p>D-10 Main Rohtak Road, Peera Garhi, Udyog Nagar, Mangolpuri, Delhi 110041</p><p>Nearest metro: Udyog Nagar</p><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=The+Oliver+Suites+D-10+Main+Rohtak+Road+Peera+Garhi+Delhi" target="_blank" rel="noopener">VIEW DIRECTIONS ↗</a></article></div></div></section>
-<section class="section countdown"><div class="inner"><div class="section-head reveal"><div class="eyebrow">Counting down to forever</div><h2>The day draws near.</h2><p class="intro">31 October 2026 · Delhi</p></div>
- <div class="timer reveal"><div class="timebox"><b id="days">--</b><span>DAYS</span></div><div class="timebox"><b id="hours">--</b><span>HOURS</span></div><div class="timebox"><b id="minutes">--</b><span>MINUTES</span></div><div class="timebox"><b id="seconds">--</b><span>SECONDS</span></div></div></div></section>
-<section class="section closing"><div class="inner"><div class="closing-card reveal"><div class="eyebrow">With love, and with joy</div><h2>We saved a place for you.</h2><p>Bring your warmest wishes and join us as we celebrate the beginning of forever.</p><a class="cta" href="https://www.google.com/maps/search/?api=1&query=The+Oliver+Suites+Delhi" target="_blank" rel="noopener">FIND THE VENUE ↗</a></div></div></section>
-</main>
-<footer><p class="footer-names">Sparshita <span>&</span> Deepak</p><p>AN INVITATION MADE WITH LOVE<br>31 · 10 · 2026</p></footer>
-<audio id="bgMusic" preload="auto" loop src="assets/mere-naam-tu.mp3"></audio><button class="music" id="musicControl" type="button">♫ MUSIC: ON</button>
-<script>
-(()=>{const gate=document.getElementById('invitationGate'),audio=document.getElementById('bgMusic'),button=document.getElementById('musicControl');let opened=false,fade=0;
-function startMusic(){if(!audio)return;audio.volume=0;const p=audio.play();if(p&&p.then)p.then(()=>{const begin=performance.now(),duration=4200;const step=now=>{const v=Math.min(1,(now-begin)/duration);audio.volume=v;if(v<1&&!audio.paused)fade=requestAnimationFrame(step)};if(fade)cancelAnimationFrame(fade);fade=requestAnimationFrame(step)}).catch(()=>{if(button)button.textContent='♫ TAP FOR MUSIC'})}
-function openGate(){if(opened)return;opened=true;startMusic();document.body.classList.remove('locked');gate.classList.add('opening');setTimeout(()=>{gate.classList.add('dismissed');setTimeout(()=>gate.remove(),850)},400)}
-gate.addEventListener('click',openGate);gate.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openGate()}});
-button.addEventListener('click',()=>{if(audio.paused){audio.volume=1;audio.play().then(()=>button.textContent='♫ MUSIC: ON').catch(()=>button.textContent='♫ TAP FOR MUSIC')}else{audio.pause();button.textContent='♫ MUSIC: OFF'}});
-function tick(){let n=Math.max(0,new Date('2026-10-31T00:00:00+05:30').getTime()-Date.now()),a=[Math.floor(n/86400000)];n%=86400000;a.push(Math.floor(n/3600000));n%=3600000;a.push(Math.floor(n/60000));n%=60000;a.push(Math.floor(n/1000));['days','hours','minutes','seconds'].forEach((id,i)=>document.getElementById(id).textContent=String(a[i]).padStart(2,'0'))}tick();setInterval(tick,1000);
-if('IntersectionObserver'in window){const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}}),{threshold:.12});document.querySelectorAll('.reveal').forEach(e=>io.observe(e))}else document.querySelectorAll('.reveal').forEach(e=>e.classList.add('visible'));
-})();
-</script></body></html>
+<body>
+  <div class="topline"></div>
+  <header class="nav">
+    <a class="monogram" href="#home" aria-label="Back to top">S <span>&</span> D</a>
+    <a class="nav-cta" href="#celebration">The Celebration <span>↗</span></a>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-photo" role="img" aria-label="Sparshita and Deepak dressed for a special evening"></div><div class="hero-glow"></div>
+      <div class="ornament ornament-left">✦</div><div class="ornament ornament-right">✦</div>
+      <div class="engagement-seal"><span class="seal-ring">♢</span><span>THE ENGAGEMENT OF</span><span class="seal-sparkle">✦</span></div>
+      <p class="eyebrow"><span></span> A NEW CHAPTER BEGINS <span></span></p>
+      <p class="invited">Together with our families</p>
+      <h1>Sparshita <em>&</em><br>Deepak</h1>
+      <div class="hero-rule"><span>❦</span></div>
+      <p class="hero-sub">Two hearts. One beautiful beginning.</p>
+      <div class="ring-motif" aria-hidden="true"><span class="ring ring-one"></span><span class="ring ring-two"></span><span class="ring-diamond">✦</span></div>
+      <p class="date-line">SATURDAY <b>·</b> 31 OCTOBER 2026</p>
+      <a class="gold-button" href="#celebration">Discover the celebration <span>↓</span></a>
+      <div class="hero-bottom"><span>✧</span> WITH LOVE, WE INVITE YOU TO CELEBRATE <span>✧</span></div>
+    </section>
+
+    <section class="intro section-pad reveal">
+      <div class="intro-ornament" aria-hidden="true">❦</div>
+      <p class="eyebrow dark">A PROMISE OF FOREVER</p>
+      <h2>Some stories are written<br><em>in the stars.</em></h2>
+      <p class="intro-copy">And some begin with a chance meeting, grow through a thousand little moments, and lead two hearts to the same beautiful promise.</p>
+      <p class="intro-copy">With the blessings of our loved ones, we're delighted to invite you to celebrate the beginning of Sparshita and Deepak's forever.</p>
+      <div class="signature">With love & joy <span>♥</span></div>
+    </section>
+
+    <section class="countdown-section section-pad reveal" aria-labelledby="count-title">
+      <div class="section-kicker">THE DAY WE'VE BEEN WAITING FOR</div>
+      <h2 id="count-title">Counting down to <em>forever</em></h2>
+      <div class="countdown" aria-label="Countdown to engagement day">
+        <div><strong id="days">---</strong><span>Days</span></div>
+        <i>:</i><div><strong id="hours">--</strong><span>Hours</span></div>
+        <i>:</i><div><strong id="minutes">--</strong><span>Minutes</span></div>
+        <i>:</i><div><strong id="seconds">--</strong><span>Seconds</span></div>
+      </div>
+      <p class="count-note">Until 31 October 2026</p>
+    </section>
+
+    <section class="gallery-section section-pad reveal" id="gallery">
+      <p class="eyebrow dark">MOMENTS THAT FEEL LIKE MAGIC</p>
+      <h2>A little glimpse of <em>us</em></h2>
+      <p class="gallery-note">A few favourite frames from their story.</p>
+      <div class="gallery">
+        <button class="photo-card photo-tall" data-photo="assets/couple-2.jpg" aria-label="Open couple photo 1">
+          <img src="assets/couple-2.jpg" alt="Sparshita and Deepak sharing a warm moment">
+        </button>
+        <button class="photo-card photo-offset" data-photo="assets/couple-3.jpg" aria-label="Open couple photo 2">
+          <img src="assets/couple-3.jpg" alt="Sparshita and Deepak together on a trip">
+        </button>
+        <button class="photo-card photo-wide" data-photo="assets/couple-4.jpg" aria-label="Open couple photo 3">
+          <img src="assets/couple-4.jpg" alt="Sparshita and Deepak smiling together">
+        </button>
+        <button class="photo-card photo-tall" data-photo="assets/couple-5.jpg" aria-label="Open couple photo 4">
+          <img src="assets/couple-5.jpg" alt="Sparshita and Deepak at a special place">
+        </button>
+        <button class="photo-card photo-offset" data-photo="assets/couple-1.jpg" aria-label="Open couple photo 5">
+          <img src="assets/couple-1.jpg" alt="Sparshita and Deepak dressed up for an evening">
+        </button>
+      </div>
+      <p class="photo-tip">A few favourite frames from their journey together.</p>
+    </section>
+
+    <section class="event-section section-pad reveal" id="celebration">
+      <div class="event-sparkles" aria-hidden="true"><span>✦</span><span>✧</span><span>✦</span></div>
+      <p class="eyebrow">SAVE THE DATE</p>
+      <h2>Join us for the <em>engagement</em></h2>
+      <div class="event-card">
+        <div class="event-icon">✦</div>
+        <p class="event-label">THE CELEBRATION</p>
+        <h3>Sparshita <span>&</span> Deepak</h3>
+        <div class="event-divider"><span>❦</span></div>
+        <p class="event-date">Saturday, 31 October 2026</p>
+        <p class="event-time">Time to be announced</p>
+        <div class="venue-name">The Oliver Suites</div>
+        <p class="address">D-10, Main Rohtak Road, Peera Garhi,<br>Udyog Nagar, Mangolpuri, Delhi – 110041</p>
+        <p class="metro"><span>🚇</span> Nearest Metro Station: <strong>Udyog Nagar</strong></p>
+        <a class="gold-button map-button" href="https://www.google.com/maps/search/?api=1&query=The+Oliver+Suites+D-10+Main+Rohtak+Road+Peera+Garhi+Udyog+Nagar+Mangolpuri+Delhi+110041" target="_blank" rel="noopener">Get directions <span>↗</span></a>
+      </div>
+    </section>
+
+    <section class="closing section-pad reveal">
+      <div class="closing-flower">❦</div>
+      <div class="forever-stamp">S <span>♥</span> D</div>
+      <p class="eyebrow dark">YOUR PRESENCE IS OUR PRESENT</p>
+      <h2>Here's to love,<br>laughter & <em>always.</em></h2>
+      <p>We can't wait to celebrate this special beginning with you.</p>
+      <div class="closing-names">Sparshita <span>&</span> Deepak</div>
+      <div class="closing-date">31 · 10 · 2026</div>
+    </section>
+  </main>
+
+  <footer>
+    <span>MADE WITH LOVE</span><span> D <i>&</i> S </span><span>31 OCTOBER 2026</span>
+  </footer>
+
+  <button class="music-button" id="musicToggle" aria-label="Play background music" title="Play background music">
+    <span class="music-icon">♫</span><span id="musicLabel">Play music</span>
+  </button>
+  <audio id="bgMusic" src="assets/music.mp3" loop preload="auto"></audio>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button id="closeLightbox" aria-label="Close photo">×</button>
+    <img id="lightboxImage" alt="Expanded couple photograph">
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
