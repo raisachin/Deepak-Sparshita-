@@ -35,12 +35,13 @@ async function startMusicFromInteraction(){
   }
 }
 const gate = document.getElementById("invitationGate");
-document.body.classList.add("invitation-locked");
+if (gate) document.body.classList.add("invitation-locked");
 
 let invitationOpened = false;
 async function openInvitation(){
   if(invitationOpened) return;
   invitationOpened = true;
+  if (!gate) { document.body.classList.remove("invitation-locked"); document.body.classList.add("invitation-open"); return; }
   gate.classList.add("opening");
   gate.setAttribute("aria-label","Opening the engagement invitation");
   // Calling play directly from this tap/click gives mobile browsers the best chance
@@ -62,13 +63,19 @@ async function openInvitation(){
     window.setTimeout(()=>gate.remove(),850);
   },720);
 }
-gate.addEventListener("click",openInvitation);
-gate.addEventListener("keydown",e=>{
-  if(e.key==="Enter" || e.key===" "){
-    e.preventDefault();
-    openInvitation();
-  }
-});
+if (gate) {
+  gate.addEventListener("click", openInvitation);
+  gate.addEventListener("keydown", e => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      openInvitation();
+    }
+  });
+} else {
+  // Fail open rather than leaving the whole invitation hidden.
+  document.body.classList.remove("invitation-locked");
+  document.body.classList.add("invitation-open");
+}
 toggle.addEventListener("click",async()=>{
   if(audio.paused){
     await startMusicFromInteraction();

@@ -16,8 +16,51 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css">
+
+  <style id="invitation-emergency-style">
+    .invitation-gate{position:fixed;inset:0;z-index:99999;display:flex;align-items:center;justify-content:center;padding:18px;overflow:auto;background:radial-gradient(ellipse at 50% 35%,#24523e,#061b15 75%);color:#f8edcf;cursor:pointer;font-family:Georgia,serif;text-align:center}
+    .gate-frame{width:min(440px,92vw);min-height:min(82vh,700px);padding:32px 20px 24px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;border:1px solid #e6c47d;box-shadow:0 0 0 7px #d3ae6418,0 0 0 8px #e2c17b66,inset 0 0 60px #ddbb7512;background:linear-gradient(150deg,#123b2f,#041b14)}
+    .gate-topline,.gate-small,.gate-date,.gate-instruction,.gate-footer{font:8px/1.8 Arial,sans-serif;letter-spacing:2px}
+    .gate-topline{color:#e7c986}.gate-crest{display:flex;align-items:center;gap:12px;color:#e6c47d;margin:10px 0}
+    .gate-crest b{font:italic 26px Georgia,serif;border:1px solid #d8b66f;border-radius:50%;width:56px;height:56px;display:grid;place-items:center}
+    .gate-crest i,.gate-names em{color:#d8b66f;font-weight:normal}
+    .gate-small{color:#cbb98f}.gate-names{font:50px/.95 Georgia,serif;color:#fff3da;margin:10px 0;text-shadow:0 4px 30px #0004}
+    .gate-rule{color:#d8b66f;margin:8px}.gate-date{color:#ecd9a8}.gate-envelope{position:relative;width:190px;height:120px;margin:18px auto;filter:drop-shadow(0 15px 18px #0006)}
+    .envelope-shadow{position:absolute;inset:12% 3% -2%;background:#020d09;filter:blur(9px)}
+    .envelope-body{position:absolute;inset:0;background:linear-gradient(135deg,#e9d6a5,#b88b45 50%,#ead8a5);border:1px solid #f8e8bd}
+    .envelope-body:after{content:"";position:absolute;inset:0;background:linear-gradient(35deg,transparent 49.5%,#936c3c 50%,transparent 50.8%),linear-gradient(-35deg,transparent 49.5%,#936c3c 50%,transparent 50.8%)}
+    .envelope-flap{position:absolute;inset:0 0 auto;height:65%;background:linear-gradient(160deg,#f4e5bb,#c8a05b);clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:top center;z-index:2}
+    .envelope-seal{position:absolute;z-index:3;left:50%;top:44%;transform:translate(-50%,-50%);width:47px;height:47px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#f9e8b7;background:radial-gradient(circle at 35% 30%,#9f3e48,#5c1828 70%);border:2px solid #e3c477;box-shadow:0 0 0 3px #6c2332,0 0 0 4px #e3c477;font:italic 13px Georgia,serif}
+    .gate-instruction{color:#f1dba9}.gate-footer{color:#a6b9a7}
+    body.invitation-locked{overflow:hidden}body.invitation-locked .nav,body.invitation-locked main,body.invitation-locked footer,body.invitation-locked .music-button{visibility:hidden}
+    .invitation-gate.opening .gate-frame{animation:royalCardOpen .85s ease both}.invitation-gate.opening .envelope-flap{animation:flapOpen .7s .1s ease-in forwards}.invitation-gate.opening .envelope-seal{animation:sealLift .38s ease-out forwards}
+    .invitation-gate.dismissed{opacity:0;visibility:hidden;pointer-events:none;transition:opacity .8s ease,visibility .8s ease}
+    @keyframes royalCardOpen{0%{transform:scale(1);opacity:1}100%{transform:scale(.92) translateY(-10px);opacity:0}}
+    @keyframes flapOpen{to{transform:rotateX(178deg)}}@keyframes sealLift{to{opacity:0;transform:translate(-50%,-70%) scale(.65)}}
+    @media(max-height:690px){.gate-frame{min-height:94vh;padding-top:18px;padding-bottom:14px}.gate-names{font-size:42px}.gate-envelope{height:90px;margin:8px auto}}
+  </style>
+
 </head>
 <body>
+  <div class="invitation-gate" id="invitationGate" role="button" tabindex="0" aria-label="Open Sparshita and Deepak's engagement invitation">
+    <div class="gate-backdrop" aria-hidden="true"></div>
+    <div class="gate-particles" aria-hidden="true"><span>✦</span><span>✧</span><span>✦</span><span>✧</span><span>✦</span><span>✧</span><span>✦</span></div>
+    <div class="gate-frame">
+      <span class="gate-corner corner-tl">✦</span><span class="gate-corner corner-tr">✦</span><span class="gate-corner corner-bl">✦</span><span class="gate-corner corner-br">✦</span>
+      <p class="gate-topline">A ROYAL INVITATION</p>
+      <div class="gate-crest"><span>✧</span><b>S <i>&</i> D</b><span>✧</span></div>
+      <p class="gate-small">TO CELEBRATE A BEAUTIFUL BEGINNING</p>
+      <h1 class="gate-names">Sparshita <em>&</em><br>Deepak</h1>
+      <div class="gate-rule"><span>❦</span></div>
+      <p class="gate-date">31 OCTOBER 2026</p>
+      <div class="gate-envelope" aria-hidden="true">
+        <div class="envelope-shadow"></div><div class="envelope-body"></div><div class="envelope-flap"></div>
+        <div class="envelope-seal">S <i>&</i> D <b>✦</b></div>
+      </div>
+      <p class="gate-instruction"><span class="tap-orbit">↗</span> TOUCH TO OPEN YOUR INVITATION</p>
+      <p class="gate-footer">WITH LOVE, FOR OUR FAVOURITE PEOPLE</p>
+    </div>
+  </div>
   <div class="topline"></div>
   <header class="nav">
     <a class="monogram" href="#home" aria-label="Back to top">S <span>&</span> D</a>
